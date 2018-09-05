@@ -5,183 +5,249 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
     <title>Whiskey Drop | Taste a new whiskey every month</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css" />
+
 </head>
 
 <body>
-    <!--Nav-->
+
     <nav class="navbar navbar-default">
+        <!--Alert-->
+        <div class="container-fluid alert-container hidden-xs">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="site-wide-alert alert alert-warning">
+                        <strong>Sale Now On!</strong> We've got sale on. Get a 12 month subscription for the price of 6! <a href="">See here for more details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/.Alert -->
         <div class="container-fluid">
             <!--Logo-->
             <div class="navbar-header">
                 <a href="/" class="navbar-brand">
                     Whiskey Drop
                 </a>
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
             </div>
 
             <!--Navbar-->
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="/">Home</a></li>
-                <li><a href="">About</a></li>
-                <li class="visible-xs"><a href="">Sign In!</a></li>
-            </ul>
+            <div class="navbar-collapse collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li class="visible-xs"><a href="">Sign In!</a></li>
+                </ul>
 
-            <!--Message-->
-            <div class="navbar-header navbar-right hidden-xs">
-                <a href="/login" class="btn btn-default navbar-btn">Sign Up!</a>
-                <p class="navbar-text"><i>Great whiskey delivered to your door</i></p>
-            </div>
-        </div>
-    </nav>
-    <article class="container">
-        <!--Alert -->
-        <div class="row hidden-xs">
-            <div class="col-xs-12">
-                <div class="alert alert-warning">
-                    <strong>Sale Now On!</strong> We've got sale on. Get a 12 month subscription for the price of 6! <a href="">See here for more details</a>
+                <!--Message-->
+                <div class="navbar-header navbar-right hidden-xs">
+                    <a href="/login" class="btn btn-default navbar-btn">Sign Up!</a>
+                    <p class="navbar-text"><i>Great whiskey delivered to your door</i></p>
                 </div>
             </div>
         </div>
-        <!-- /.Alert -->
-        
+    </nav>
+
+    <!-- Callout -->
+    <div class="container-fluid callout-container">
+        <div class="opaque-overlay">&nbsp;</div>
         <!-- Callout -->
         <div class="row">
             <div class="col-xs-12">
                 <section class="callout jumbotron text-center">
                     <h1>The finest whiskeys delivered to your doorstep.</h1>
-                    <p class="lead">Sign up today to start receiving the world's best whiskeys every month.<s class="hidden-xs">€19.99</s> <span class="visible-xs"><br></span></span><strong><mark>First one is free!</mark></strong></p>
-                    <p><button class="btn btn-lg btn-success">Sign Up!</button></p>
-                    <p class="text-muted"><small>You must be over 18 to sign up to the service. Please drink responsibilty.</small></p>
+                    <hr class="block-divider block-divider--orange">
+                    <p class="lead">Sign up today to start receiving the world's best whiskeys every month. <s class="hidden-xs">€19.99</s> <span class="visible-xs"><br></span> <strong><mark>First one is free!</mark></strong></p>
+                    <p><button class="btn btn-lg btn--cta btn--red" data-toggle='modal' data-target='#signUpModal'>Sign Up!</button></p>
+                    <p class="text-muted"><small>You must be over 18 to sign up to our service. Please drink responsibly.</small></p>
                 </section>
             </div>
         </div>
         <!-- /.callout -->
+    </div>
+    <!-- /.callout -->
 
-        <!-- Quotes -->
-        <section class="quotes">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="page-header">
-                        <h2 class="text-uppercase">Quotes:</h2>
+    <!-- Quotes -->
+    <div class="container-wrapper">
+        <div class="container quotes-container content-container">
+            <section class="quotes">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="page-header">
+                            <h2 class="text-uppercase">Quotes:</h2>
+                            <hr class="block-divider block-divider--short">
+                        </div>
                     </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="media">
+                            <div class="media-left hidden-xs">
+                                <img src="/images/popeye" class="img-circle media-object" height=100 width=100>
+                            </div>
+                            <div class="media-body">
+                                <blockquote class="quote">
+                                    <p>"I've been introduced to more than 10 great international whiskeys I never knew about."</p>
+                                    <footer>Popeye on<cite title="Twitter">Twitter</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="media">
+                            <div class="media-left hidden-xs">
+                                <img src="/images/bluto__by_smigliano-dcbn63q" class="img-circle media-object" height=100 width=100>
+                            </div>
+                            <div class="media-body">
+                                <blockquote class="quote">
+                                    <p>"I haven't been sober for months!"</p>
+                                    <footer>Brutus on<cite title="Twitter">Twitter</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- /.quotes -->
+
+    <!-- Features -->
+    <div class="container-wrapper container-wrapper--red">
+        <div class="container feature-container content-container">
+            <section class="features">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="page-header">
+                            <h2 class="text-uppercase">Features:</h2>
+                            <hr class="block-divider block-divider--short block-divider--white">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-lg-4">
+                        <div class="feature">
+                            <h3><span class="glyphicon glyphicon-gift hidden-xs"></span> Feature 1 <span class="label label-success">New!</span></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <p><a href="#" class="btn btn-sm btn-default">Read More</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-4">
+                        <div class="feature">
+                            <h3><span class="glyphicon glyphicon-credit-card hidden-xs"></span> Feature 2</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <p><a href="#" class="btn btn-sm btn-default">Read More</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 d-none d-lg-block col-lg-4">
+                        <div class="feature">
+                            <h3><span class="glyphicon glyphicon-remove-sign hidden-xs"></span> Feature 3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <p><a href="#" class="btn btn-sm btn-default">Read More</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- /.features -->
+
+
+    <!-- /.Tables -->
+    <section class="Tables">
+        <h2 class="text-uppercase">Monthly favorites: Top 5 Whiskey of the month</h2>
+        <table class="table table-bordered table-striped table-hover table-dark">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Origin</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Johnnie Walker Gold Label Reserve</td>
+                    <td>UNITED KINGDOM</td>
+
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Breckenridge Distillery PX Sherry Cask Finish</td>
+                    <td>UNITED STATES</td>
+
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Hibiki 21 Years Old</td>
+                    <td>JAPAN</td>
+
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Hyde Whiskey No 6 - Special Reserve</td>
+                    <td>IRELAND</td>
+
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Teeling Whiskey Stout Cask</td>
+                    <td>IRELAND</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!-- /.Tables -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Sign Up For Whiskey Drop!</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                            <p class="help-block">We'll never share your email address with anyone</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Repeat Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repeat Your Password">
+                        </div>
+                        <button type="submit" class="btn btn-success">Sign Up!</button>
+                    </form>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12 col-md-6">
-                    <div class="media">
-                        <div class="media-left hidden-xs">
-                            <img src="/images/popeye" class="img-circle media-object" height=100 width=100>
-                        </div>
-                        <div class="media-body">
-                            <blockquote class="quote">
-                                <p>"I've been introduced to more than 10 great international whiskeys I never knew about."</p>
-                                <footer>Popeye on<cite title="Twitter">Twitter</cite></footer>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="media">
-                        <div class="media-left hidden-xs">
-                            <img src="/images/bluto__by_smigliano-dcbn63q" class="img-circle media-object" height=100 width=100>
-                        </div>
-                        <div class="media-body">
-                            <blockquote class="quote">
-                                <p>"I haven't been sober for months!"</p>
-                                <footer>Brutus on<cite title="Twitter">Twitter</cite></footer>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-        </section>
-        <!-- /.quotes -->
+        </div>
+    </div>
 
-        <!-- Features -->
-        <section class="features">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="page-header">
-                        <h2 class="text-uppercase">Features:</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-md-6 col-lg-4">
-                    <div class="feature">
-                        <h3><span class="glyphicon glyphicon-gift hidden-xs"></span> Feature 1 <span class="label label-success">New!</span></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <p><button><a href="#" class="btn btn-sm btn-default">Read More</button></a>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-6 col-lg-4">
-                    <div class="feature">
-                        <h3><span class="glyphicon glyphicon-credit-card hidden-xs"></span> Feature 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <p><a href="#" class="btn btn-sm btn-default">Read More</a></p>
-                    </div>
-                </div>
-                <div class="col-xs-12 d-none d-lg-block col-lg-4">
-                    <div class="feature">
-                        <h3><span class="glyphicon glyphicon-remove-sign hidden-xs"></span> Feature 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <p><a href="#" class="btn btn-sm btn-default">Read More</a></p>
-                    </div>
-                </div>
-            </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-        </section>
-        <!-- /.features -->
-        <hr>
-
-        <!-- /.Tables -->
-        <section class="Tables">
-            <h2 class="text-uppercase">Monthly favorites: Top 5 Whiskey of the month</h2>
-            <table class="table table-bordered table-hover table-dark">
-                <thead>
-                    <tr>
-                        <th scope="col"></th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Origin</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Johnnie Walker Gold Label Reserve</td>
-                        <td>UNITED KINGDOM</td>
-
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Breckenridge Distillery PX Sherry Cask Finish</td>
-                        <td>UNITED STATES</td>
-
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Hibiki 21 Years Old</td>
-                        <td>JAPAN</td>
-
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Hyde Whiskey No 6 - Special Reserve</td>
-                        <td>IRELAND</td>
-
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Teeling Whiskey Stout Cask</td>
-                        <td>IRELAND</td>
-
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <!-- /.Tables -->
-    </article>
 </body>
 
 </html>
